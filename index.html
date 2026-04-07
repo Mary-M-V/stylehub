@@ -45,10 +45,15 @@
 
 <!-- Google Fonts async load -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- Font file preloads — eliminates CLS from font swap -->
+<link rel="preload" as="font" type="font/woff2" crossorigin
+  href="https://fonts.gstatic.com/s/bebasneuepro/v6/rP2Wp2ywxOxLZNFG0PYmUFpCKw.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin
+  href="https://fonts.gstatic.com/s/dmsans/v15/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K4.woff2">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=optional">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=optional" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=optional"></noscript>
 <!-- Preload CSS for performance -->
 <link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="css/styles.css"></noscript>
@@ -85,7 +90,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#F5F1EB;--dark:#111009;--dark2:#1A1814;--gold:#C8A84A;--cream:#FDFAF5}
 html{scroll-behavior:smooth}
-body{background:var(--bg);font-family:'DM Sans',sans-serif,system-ui;color:var(--dark);overflow-x:hidden}
+body{background:var(--bg);font-family:'DM Sans',sans-serif,system-ui;color:var(--dark);overflow-x:hidden;font-size-adjust:0.52}
 nav{position:fixed;top:0;left:0;right:0;z-index:300;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;background:rgba(17,16,9,0.92);backdrop-filter:blur(20px)}
 .nav-logo{font-family:'Bebas Neue','Arial Black',sans-serif;font-size:1.5rem;letter-spacing:0.06em;color:#FDFAF5;text-decoration:none}
 .nav-logo span{color:var(--gold)}

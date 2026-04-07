@@ -16,27 +16,27 @@ function switchTab(btn, id) {
 /* ── Modal system ── */
 const forms = {
   cliente: `
-    <div class="form-row">
-      <div class="form-group"><label class="form-label">Nombre</label><input class="form-input" type="text" placeholder="María"></div>
-      <div class="form-group"><label class="form-label">Apellidos</label><input class="form-input" type="text" placeholder="González"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;">
+      <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Nombre</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="María"></div>
+      <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Apellidos</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="González"></div>
     </div>
-    <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" placeholder="maria@email.com"></div>
-    <div class="form-group"><label class="form-label">Ciudad</label><input class="form-input" type="text" placeholder="Barcelona"></div>
-    <div class="form-group"><label class="form-label">Contraseña</label><input class="form-input" type="password" placeholder="••••••••"></div>`,
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Email</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="email" placeholder="maria@email.com"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Ciudad</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Barcelona"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Contraseña</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="password" placeholder="••••••••"></div>`,
   peluquero: `
-    <div class="form-row">
-      <div class="form-group"><label class="form-label">Nombre</label><input class="form-input" type="text" placeholder="Lucía"></div>
-      <div class="form-group"><label class="form-label">Apellidos</label><input class="form-input" type="text" placeholder="Herrera"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;">
+      <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Nombre</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Lucía"></div>
+      <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Apellidos</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Herrera"></div>
     </div>
-    <div class="form-group"><label class="form-label">Nombre del salón</label><input class="form-input" type="text" placeholder="Salón Lucía"></div>
-    <div class="form-group"><label class="form-label">Email profesional</label><input class="form-input" type="email" placeholder="lucia@salon.com"></div>
-    <div class="form-group"><label class="form-label">Ciudad</label><input class="form-input" type="text" placeholder="Sevilla"></div>
-    <div class="form-group"><label class="form-label">Contraseña</label><input class="form-input" type="password" placeholder="••••••••"></div>`,
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Nombre del salón</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Salón Lucía"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Email profesional</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="email" placeholder="lucia@salon.com"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Ciudad</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Sevilla"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Contraseña</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="password" placeholder="••••••••"></div>`,
   marca: `
-    <div class="form-group"><label class="form-label">Nombre de la marca</label><input class="form-input" type="text" placeholder="Mi Marca Pro"></div>
-    <div class="form-group"><label class="form-label">Email corporativo</label><input class="form-input" type="email" placeholder="contacto@mimarca.com"></div>
-    <div class="form-group"><label class="form-label">Categoría de productos</label>
-      <select class="form-input" style="appearance:none;cursor:pointer;">
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Nombre de la marca</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Mi Marca Pro"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Email corporativo</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="email" placeholder="contacto@mimarca.com"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Categoría de productos</label>
+      <select style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" style="appearance:none;cursor:pointer;">
         <option>Tratamientos capilares</option>
         <option>Tintes y colorantes</option>
         <option>Champús y acondicionadores</option>
@@ -44,7 +44,7 @@ const forms = {
         <option>Varios</option>
       </select>
     </div>
-    <div class="form-group"><label class="form-label">Contraseña</label><input class="form-input" type="password" placeholder="••••••••"></div>`
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Contraseña</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="password" placeholder="••••••••"></div>`
 };
 
 const tabLabels = { cliente:'Soy cliente', peluquero:'Soy peluquero/a', marca:'Soy una marca' };
@@ -60,8 +60,8 @@ function buildRegisterModal(activeTab) {
       ).join('')}
     </div>
     <div id="form-fields">${forms[activeTab]}</div>
-    <button class="form-submit" onclick="submitForm()">Crear cuenta gratuita →</button>
-    <div class="form-terms">Al registrarte aceptas los <a href="#">Términos de uso</a> y la <a href="#">Política de privacidad</a></div>`;
+    <button style="width:100%;padding:0.9rem;background:#111009;color:#FDFAF5;border:none;font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;margin-top:0.5rem;" onclick="submitForm()">Crear cuenta gratuita →</button>
+    <div style="font-size:0.72rem;color:#7A7268;text-align:center;margin-top:0.8rem;">Al registrarte aceptas los <a href="#">Términos de uso</a> y la <a href="#">Política de privacidad</a></div>`;
 }
 
 function buildLoginModal() {
@@ -69,10 +69,10 @@ function buildLoginModal() {
     <button class="modal-close" onclick="closeModal()">✕</button>
     <div class="modal-title">Iniciar sesión</div>
     <div class="modal-sub">Bienvenido de nuevo a StyleHub.</div>
-    <div class="form-group" style="margin-top:0.5rem"><label class="form-label">Email</label><input class="form-input" type="email" placeholder="tu@email.com"></div>
-    <div class="form-group"><label class="form-label">Contraseña</label><input class="form-input" type="password" placeholder="••••••••"></div>
-    <button class="form-submit" onclick="submitForm()">Entrar →</button>
-    <div class="form-terms" style="margin-top:0.8rem">
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;" style="margin-top:0.5rem"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Email</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="email" placeholder="tu@email.com"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Contraseña</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="password" placeholder="••••••••"></div>
+    <button style="width:100%;padding:0.9rem;background:#111009;color:#FDFAF5;border:none;font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;margin-top:0.5rem;" onclick="submitForm()">Entrar →</button>
+    <div style="font-size:0.72rem;color:#7A7268;text-align:center;margin-top:0.8rem;" style="margin-top:0.8rem">
       <a href="#">¿Olvidaste tu contraseña?</a> &nbsp;·&nbsp;
       <a href="#" onclick="openModal('register','cliente')">Crear cuenta gratis</a>
     </div>`;
@@ -105,7 +105,7 @@ function submitForm() {
       <div class="icon">🎉</div>
       <div style="font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:0.04em;margin-bottom:0.5rem;">¡Cuenta creada!</div>
       <p>Bienvenido/a a StyleHub. Hemos enviado un email de verificación a tu correo. En breve podrás completar tu perfil.</p>
-      <button class="form-submit" style="margin-top:1.5rem;" onclick="closeModal()">Ir a mi panel →</button>
+      <button style="width:100%;padding:0.9rem;background:#111009;color:#FDFAF5;border:none;font-family:'DM Sans',sans-serif;font-size:0.88rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;margin-top:0.5rem;" style="margin-top:1.5rem;" onclick="closeModal()">Ir a mi panel →</button>
     </div>`;
 }
 
@@ -156,27 +156,27 @@ setInterval(() => requestAnimationFrame(() => nextStory()), 7000);
 /* ── Inline register form (Bloque registro) ── */
 const riForms = {
   cliente: `
-    <div class="form-row">
-      <div class="form-group"><label class="form-label">Nombre</label><input class="form-input" type="text" placeholder="María"></div>
-      <div class="form-group"><label class="form-label">Apellidos</label><input class="form-input" type="text" placeholder="González"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;">
+      <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Nombre</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="María"></div>
+      <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Apellidos</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="González"></div>
     </div>
-    <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" placeholder="maria@email.com"></div>
-    <div class="form-group"><label class="form-label">Ciudad</label><input class="form-input" type="text" placeholder="Barcelona"></div>
-    <div class="form-group"><label class="form-label">Contraseña</label><input class="form-input" type="password" placeholder="••••••••"></div>`,
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Email</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="email" placeholder="maria@email.com"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Ciudad</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Barcelona"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Contraseña</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="password" placeholder="••••••••"></div>`,
   peluquero: `
-    <div class="form-row">
-      <div class="form-group"><label class="form-label">Nombre</label><input class="form-input" type="text" placeholder="Lucía"></div>
-      <div class="form-group"><label class="form-label">Apellidos</label><input class="form-input" type="text" placeholder="Herrera"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;">
+      <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Nombre</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Lucía"></div>
+      <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Apellidos</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Herrera"></div>
     </div>
-    <div class="form-group"><label class="form-label">Nombre del salón</label><input class="form-input" type="text" placeholder="Salón Lucía"></div>
-    <div class="form-group"><label class="form-label">Email profesional</label><input class="form-input" type="email" placeholder="lucia@salon.com"></div>
-    <div class="form-group"><label class="form-label">Ciudad</label><input class="form-input" type="text" placeholder="Sevilla"></div>
-    <div class="form-group"><label class="form-label">Contraseña</label><input class="form-input" type="password" placeholder="••••••••"></div>`,
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Nombre del salón</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Salón Lucía"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Email profesional</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="email" placeholder="lucia@salon.com"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Ciudad</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Sevilla"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Contraseña</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="password" placeholder="••••••••"></div>`,
   marca: `
-    <div class="form-group"><label class="form-label">Nombre de la marca</label><input class="form-input" type="text" placeholder="Mi Marca Pro"></div>
-    <div class="form-group"><label class="form-label">Email corporativo</label><input class="form-input" type="email" placeholder="contacto@mimarca.com"></div>
-    <div class="form-group"><label class="form-label">Categoría de productos</label>
-      <select class="form-input" style="appearance:none;cursor:pointer;">
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Nombre de la marca</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Mi Marca Pro"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Email corporativo</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="email" placeholder="contacto@mimarca.com"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Categoría de productos</label>
+      <select style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" style="appearance:none;cursor:pointer;">
         <option>Tratamientos capilares</option>
         <option>Tintes y colorantes</option>
         <option>Champús y acondicionadores</option>
@@ -184,7 +184,7 @@ const riForms = {
         <option>Varios</option>
       </select>
     </div>
-    <div class="form-group"><label class="form-label">Contraseña</label><input class="form-input" type="password" placeholder="••••••••"></div>`
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Contraseña</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="password" placeholder="••••••••"></div>`
 };
 const riLabels = {
   cliente: '💇 Soy cliente',
@@ -222,27 +222,27 @@ function scrollToRegister(cat) {
 /* ── Register mid form ── */
 const rmForms = {
   cliente: `
-    <div class="form-row">
-      <div class="form-group"><label class="form-label">Nombre</label><input class="form-input" type="text" placeholder="María"></div>
-      <div class="form-group"><label class="form-label">Apellidos</label><input class="form-input" type="text" placeholder="González"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;">
+      <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Nombre</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="María"></div>
+      <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Apellidos</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="González"></div>
     </div>
-    <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" placeholder="maria@email.com"></div>
-    <div class="form-group"><label class="form-label">Ciudad</label><input class="form-input" type="text" placeholder="Barcelona"></div>
-    <div class="form-group"><label class="form-label">Contraseña</label><input class="form-input" type="password" placeholder="••••••••"></div>`,
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Email</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="email" placeholder="maria@email.com"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Ciudad</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Barcelona"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Contraseña</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="password" placeholder="••••••••"></div>`,
   peluquero: `
-    <div class="form-row">
-      <div class="form-group"><label class="form-label">Nombre</label><input class="form-input" type="text" placeholder="Lucía"></div>
-      <div class="form-group"><label class="form-label">Apellidos</label><input class="form-input" type="text" placeholder="Herrera"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;">
+      <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Nombre</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Lucía"></div>
+      <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Apellidos</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Herrera"></div>
     </div>
-    <div class="form-group"><label class="form-label">Nombre del salón</label><input class="form-input" type="text" placeholder="Salón Lucía"></div>
-    <div class="form-group"><label class="form-label">Email profesional</label><input class="form-input" type="email" placeholder="lucia@salon.com"></div>
-    <div class="form-group"><label class="form-label">Ciudad</label><input class="form-input" type="text" placeholder="Sevilla"></div>
-    <div class="form-group"><label class="form-label">Contraseña</label><input class="form-input" type="password" placeholder="••••••••"></div>`,
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Nombre del salón</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Salón Lucía"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Email profesional</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="email" placeholder="lucia@salon.com"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Ciudad</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Sevilla"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Contraseña</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="password" placeholder="••••••••"></div>`,
   marca: `
-    <div class="form-group"><label class="form-label">Nombre de la marca</label><input class="form-input" type="text" placeholder="Mi Marca Pro"></div>
-    <div class="form-group"><label class="form-label">Email corporativo</label><input class="form-input" type="email" placeholder="contacto@mimarca.com"></div>
-    <div class="form-group"><label class="form-label">Categoría de productos</label>
-      <select class="form-input" style="appearance:none;cursor:pointer;">
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Nombre de la marca</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Mi Marca Pro"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Email corporativo</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="email" placeholder="contacto@mimarca.com"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Categoría de productos</label>
+      <select style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" style="appearance:none;cursor:pointer;">
         <option>Tratamientos capilares</option>
         <option>Tintes y colorantes</option>
         <option>Champús y acondicionadores</option>
@@ -250,7 +250,7 @@ const rmForms = {
         <option>Varios</option>
       </select>
     </div>
-    <div class="form-group"><label class="form-label">Contraseña</label><input class="form-input" type="password" placeholder="••••••••"></div>`
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Contraseña</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="password" placeholder="••••••••"></div>`
 };
 const rmLabels = {
   cliente: '💇 Soy cliente',
@@ -278,27 +278,27 @@ function rmSubmit() {
 /* ── Register strip (golden block) ── */
 const rsForms = {
   cliente: `
-    <div class="form-row">
-      <div class="form-group"><label class="form-label">Nombre</label><input class="form-input" type="text" placeholder="María"></div>
-      <div class="form-group"><label class="form-label">Apellidos</label><input class="form-input" type="text" placeholder="González"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;">
+      <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Nombre</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="María"></div>
+      <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Apellidos</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="González"></div>
     </div>
-    <div class="form-group"><label class="form-label">Email</label><input class="form-input" type="email" placeholder="maria@email.com"></div>
-    <div class="form-group"><label class="form-label">Ciudad</label><input class="form-input" type="text" placeholder="Barcelona"></div>
-    <div class="form-group"><label class="form-label">Contraseña</label><input class="form-input" type="password" placeholder="••••••••"></div>`,
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Email</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="email" placeholder="maria@email.com"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Ciudad</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Barcelona"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Contraseña</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="password" placeholder="••••••••"></div>`,
   peluquero: `
-    <div class="form-row">
-      <div class="form-group"><label class="form-label">Nombre</label><input class="form-input" type="text" placeholder="Lucía"></div>
-      <div class="form-group"><label class="form-label">Apellidos</label><input class="form-input" type="text" placeholder="Herrera"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;">
+      <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Nombre</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Lucía"></div>
+      <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Apellidos</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Herrera"></div>
     </div>
-    <div class="form-group"><label class="form-label">Nombre del salón</label><input class="form-input" type="text" placeholder="Salón Lucía"></div>
-    <div class="form-group"><label class="form-label">Email profesional</label><input class="form-input" type="email" placeholder="lucia@salon.com"></div>
-    <div class="form-group"><label class="form-label">Ciudad</label><input class="form-input" type="text" placeholder="Sevilla"></div>
-    <div class="form-group"><label class="form-label">Contraseña</label><input class="form-input" type="password" placeholder="••••••••"></div>`,
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Nombre del salón</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Salón Lucía"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Email profesional</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="email" placeholder="lucia@salon.com"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Ciudad</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Sevilla"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Contraseña</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="password" placeholder="••••••••"></div>`,
   marca: `
-    <div class="form-group"><label class="form-label">Nombre de la marca</label><input class="form-input" type="text" placeholder="Mi Marca Pro"></div>
-    <div class="form-group"><label class="form-label">Email corporativo</label><input class="form-input" type="email" placeholder="contacto@mimarca.com"></div>
-    <div class="form-group"><label class="form-label">Categoría de productos</label>
-      <select class="form-input" style="appearance:none;cursor:pointer;">
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Nombre de la marca</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="text" placeholder="Mi Marca Pro"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Email corporativo</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="email" placeholder="contacto@mimarca.com"></div>
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Categoría de productos</label>
+      <select style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" style="appearance:none;cursor:pointer;">
         <option>Tratamientos capilares</option>
         <option>Tintes y colorantes</option>
         <option>Champús y acondicionadores</option>
@@ -306,7 +306,7 @@ const rsForms = {
         <option>Varios</option>
       </select>
     </div>
-    <div class="form-group"><label class="form-label">Contraseña</label><input class="form-input" type="password" placeholder="••••••••"></div>`
+    <div style="display:flex;flex-direction:column;margin-bottom:1rem;"><label style="display:block;font-size:0.68rem;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;color:#3D342E;margin-bottom:0.35rem;">Contraseña</label><input style="display:block;width:100%;padding:0.75rem 1rem;border:1.5px solid rgba(200,168,74,0.25);font-family:'DM Sans',sans-serif;font-size:0.88rem;background:white;outline:none;box-sizing:border-box;" type="password" placeholder="••••••••"></div>`
 };
 const rsLabels = {
   cliente: '💇 Soy cliente',

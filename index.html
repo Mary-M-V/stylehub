@@ -43,46 +43,14 @@
 <link rel="apple-touch-icon" href="img/icon-192.png"><!-- TODO: crear icono 192×192px y subir a /img/icon-192.png -->
 
 
-<!-- Google Fonts async load -->
+<!-- Fonts: preconnect + preload для усунення CLS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<!-- Font file preloads — eliminates CLS from font swap -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="font" type="font/woff2" crossorigin
   href="https://fonts.gstatic.com/s/bebasneuepro/v6/rP2Wp2ywxOxLZNFG0PYmUFpCKw.woff2">
 <link rel="preload" as="font" type="font/woff2" crossorigin
   href="https://fonts.gstatic.com/s/dmsans/v15/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K4.woff2">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=optional">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=optional" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=optional"></noscript>
-<!-- Preload CSS for performance -->
-<link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="css/styles.css"></noscript>
-
-<!-- ═══ ANALYTICS ═══ -->
-<!-- GA4: вставити тег тут -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-</script> -->
-<!-- Meta Pixel: вставити тут -->
-<!-- <script>
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-  document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', 'YOUR_PIXEL_ID');
-  fbq('track', 'PageView');
-</script> -->
-<!-- GTM: вставити тут -->
-<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=block">
 <link rel="manifest" href="manifest.json"><!-- TODO: crear manifest.json para PWA -->
 <meta name="theme-color" content="#C8A84A">
 <style>
@@ -98,7 +66,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;height:60px;display:flex;ali
 .hero-video-wrap{position:absolute;inset:0;z-index:0;overflow:hidden}
 .hero-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
 .hero-video-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(17,16,9,0.72) 0%,rgba(17,16,9,0.45) 45%,rgba(17,16,9,0.15) 75%,transparent 100%),linear-gradient(to top,rgba(17,16,9,0.55) 0%,transparent 40%)}
-.hero-content{position:relative;z-index:2;width:100%;max-width:1400px;margin:0 auto;padding:0 3rem;display:flex;align-items:center}
+.hero-content{position:relative;z-index:2;width:100%;max-width:1400px;margin:0 auto;padding:0 3rem;display:flex;align-items:center;contain:layout}
 .hero-left{display:flex;flex-direction:column;justify-content:center;max-width:560px;padding:4rem 0}
 .hero-h1{font-family:'Bebas Neue','Arial Black',sans-serif;font-size:clamp(4rem,8vw,7rem);line-height:0.95;color:#FDFAF5;margin-bottom:1.8rem}
 .hero-h1 em{font-style:normal;color:var(--gold)}

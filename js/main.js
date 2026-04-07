@@ -150,7 +150,7 @@ function goStory(idx) {
 function nextStory() { goStory(currentStory + 1); }
 function prevStory() { goStory(currentStory - 1); }
 // Auto-advance every 7s
-setInterval(() => nextStory(), 7000);
+setInterval(() => requestAnimationFrame(() => nextStory()), 7000);
 
 
 /* ── Inline register form (Bloque registro) ── */
@@ -214,7 +214,7 @@ function riSubmit() {
 
 /* Override openModal hero buttons to scroll to #registro instead */
 function scrollToRegister(cat) {
-  document.getElementById('registro').scrollIntoView({behavior:'smooth'});
+  requestAnimationFrame(() => { document.getElementById('registro').scrollIntoView({behavior:'smooth'}); });
   setTimeout(() => riSelectCat(cat), 600);
 }
 
@@ -331,7 +331,7 @@ function rsSubmit() {
 }
 /* Update scrollToRegister to also trigger rs form */
 function scrollToRegister(cat) {
-  document.getElementById('registro').scrollIntoView({behavior:'smooth'});
+  requestAnimationFrame(() => { document.getElementById('registro').scrollIntoView({behavior:'smooth'}); });
   setTimeout(() => rsSelect(cat), 650);
 }
 

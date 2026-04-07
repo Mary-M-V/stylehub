@@ -41,10 +41,17 @@
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="img/favicon.png"><!-- TODO: crear favicon 32×32px y subir a /img/favicon.png -->
 <link rel="apple-touch-icon" href="img/icon-192.png"><!-- TODO: crear icono 192×192px y subir a /img/icon-192.png -->
+
+
+<!-- Google Fonts async load -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"></noscript>
+<!-- Preload CSS for performance -->
+<link rel="preload" href="css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="css/styles.css"></noscript>
 
 <!-- ═══ ANALYTICS ═══ -->
 <!-- GA4: вставити тег тут -->
@@ -73,6 +80,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-XXXXXXX');</script> -->
 <link rel="manifest" href="manifest.json"><!-- TODO: crear manifest.json para PWA -->
 <meta name="theme-color" content="#C8A84A">
+<style>
+/* Critical CSS — above the fold */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#F5F1EB;--dark:#111009;--dark2:#1A1814;--gold:#C8A84A;--cream:#FDFAF5}
+html{scroll-behavior:smooth}
+body{background:var(--bg);font-family:'DM Sans',sans-serif,system-ui;color:var(--dark);overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:300;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;background:rgba(17,16,9,0.92);backdrop-filter:blur(20px)}
+.nav-logo{font-family:'Bebas Neue','Arial Black',sans-serif;font-size:1.5rem;letter-spacing:0.06em;color:#FDFAF5;text-decoration:none}
+.nav-logo span{color:var(--gold)}
+.hero{position:relative;width:100%;min-height:100vh;padding-top:60px;overflow:hidden;display:flex;align-items:center;background:var(--dark2)}
+.hero-video-wrap{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.hero-video-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(17,16,9,0.72) 0%,rgba(17,16,9,0.45) 45%,rgba(17,16,9,0.15) 75%,transparent 100%),linear-gradient(to top,rgba(17,16,9,0.55) 0%,transparent 40%)}
+.hero-content{position:relative;z-index:2;width:100%;max-width:1400px;margin:0 auto;padding:0 3rem;display:flex;align-items:center}
+.hero-left{display:flex;flex-direction:column;justify-content:center;max-width:560px;padding:4rem 0}
+.hero-h1{font-family:'Bebas Neue','Arial Black',sans-serif;font-size:clamp(4rem,8vw,7rem);line-height:0.95;color:#FDFAF5;margin-bottom:1.8rem}
+.hero-h1 em{font-style:normal;color:var(--gold)}
+</style>
 </head>
 <body>
 
@@ -329,9 +354,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="stories-carousel">
     <!-- Nav dots -->
     <div class="story-dots">
-      <button class="story-dot active" onclick="goStory(0)"></button>
-      <button class="story-dot" onclick="goStory(1)"></button>
-      <button class="story-dot" onclick="goStory(2)"></button>
+      <button class="story-dot active" onclick="goStory(0)" aria-label="Historia 1: Ana Martínez"></button>
+      <button class="story-dot" onclick="goStory(1)" aria-label="Historia 2: Marcos Delgado"></button>
+      <button class="story-dot" onclick="goStory(2)" aria-label="Historia 3: VivéColor"></button>
     </div>
 
     <!-- STORY 1: Cliente - Ana -->
@@ -553,10 +578,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <a href="#" class="flogo">Style<span>Hub</span></a>
       <p class="ftagline">Donde el talento encuentra su lugar, y el estilo encuentra su hogar.</p>
       <div class="fsoc">
-        <div class="fsoc-btn">IG</div>
-        <div class="fsoc-btn">TK</div>
-        <div class="fsoc-btn">YT</div>
-        <div class="fsoc-btn">FB</div>
+        <div class="fsoc-btn" role="link" aria-label="Instagram StyleHub">IG</div>
+        <div class="fsoc-btn" role="link" aria-label="TikTok StyleHub">TK</div>
+        <div class="fsoc-btn" role="link" aria-label="YouTube StyleHub">YT</div>
+        <div class="fsoc-btn" role="link" aria-label="Facebook StyleHub">FB</div>
       </div>
     </div>
     <div>
@@ -616,6 +641,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
 <!-- ══ JAVASCRIPT ══ -->
-<script src="js/main.js"></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>

@@ -100,7 +100,7 @@ color:#FDFAF5;margin-bottom:1.8rem;
 opacity:0;animation:fadeUp .7s ease .3s forwards;
 }.hero-h1 em{font-style:normal;color:var(--gold);}.hero-p{
 font-size:0.95rem;line-height:1.8;
-color:rgba(253,250,245,0.55);font-weight:300;
+color:rgba(253,250,245,0.85);font-weight:300;
 max-width:400px;margin-bottom:2.8rem;
 opacity:0;animation:fadeUp .7s ease .45s forwards;
 }.hero-p strong{color:rgba(253,250,245,0.85);font-weight:500;}.hero-btns{
@@ -117,11 +117,11 @@ text-align:center;white-space:nowrap;
 transition:all .25s cubic-bezier(.16,1,.3,1);
 }.hbtn-a{
 background:transparent;
-border-color:rgba(253,250,245,0.22);
+border-color:rgba(253,250,245,0.55);
 color:rgba(253,250,245,0.75);
 }.hbtn-a:hover{border-color:rgba(253,250,245,0.5);color:#FDFAF5;transform:translateY(-2px);}.hbtn-b{
 background:rgba(253,250,245,0.07);
-border-color:rgba(253,250,245,0.22);
+border-color:rgba(253,250,245,0.55);
 color:rgba(253,250,245,0.75);
 }.hbtn-b:hover{background:rgba(253,250,245,0.13);color:#FDFAF5;transform:translateY(-2px);}.hbtn-c{
 background:var(--gold);border-color:var(--gold);
@@ -160,11 +160,11 @@ margin-bottom:3rem;
 }.hiw-tab{
 padding:0.7rem 1.4rem;font-size:0.72rem;font-weight:400;
 letter-spacing:0.09em;text-transform:uppercase;
-color:rgba(253,250,245,0.3);border:none;background:none;
+color:rgba(253,250,245,0.65);border:none;background:none;
 cursor:pointer;font-family:'DM Sans',sans-serif;
 border-bottom:2px solid transparent;margin-bottom:-1px;
 transition:all .2s;
-}.hiw-tab.active{color:var(--gold);border-bottom-color:var(--gold);}.hiw-tab:hover:not(.active){color:rgba(253,250,245,0.55);}.hiw-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;}.hiw-step{padding-top:1.5rem;border-top:1px solid rgba(200,168,74,0.1);}.step-n{
+}.hiw-tab.active{color:var(--gold);border-bottom-color:var(--gold);}.hiw-tab:hover:not(.active){color:rgba(253,250,245,0.85);}.hiw-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;}.hiw-step{padding-top:1.5rem;border-top:1px solid rgba(200,168,74,0.1);}.step-n{
 font-size:0.62rem;font-weight:500;letter-spacing:0.15em;
 color:var(--gold);margin-bottom:0.9rem;
 }.step-title{
@@ -208,7 +208,7 @@ letter-spacing:0.06em;color:#FDFAF5;margin-bottom:0.8rem;
 display:block;
 }.flogo span{color:var(--gold);}.ftagline{
 font-size:0.8rem;line-height:1.7;
-color:rgba(253,250,245,0.28);font-weight:300;
+color:rgba(253,250,245,0.55);font-weight:300;
 max-width:210px;margin-bottom:1.3rem;
 }.fsoc{display:flex;gap:0.5rem;}.fsoc-btn{
 width:28px;height:28px;
@@ -221,14 +221,14 @@ transition:all .2s;font-family:'DM Sans',sans-serif;
 font-size:0.62rem;font-weight:500;letter-spacing:0.13em;
 text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem;
 }.flinks{list-style:none;display:flex;flex-direction:column;gap:0.55rem;}.flinks a{
-font-size:0.78rem;color:rgba(253,250,245,0.3);
+font-size:0.78rem;color:rgba(253,250,245,0.65);
 text-decoration:none;font-weight:300;transition:color .2s;
 }.flinks a:hover{color:#FDFAF5;}.footer-btm{
 border-top:1px solid rgba(200,168,74,0.07);
 padding-top:1.6rem;
 display:flex;justify-content:space-between;align-items:center;
-}.fcopy{font-size:0.68rem;color:rgba(253,250,245,0.15);font-weight:300;}.flegal{display:flex;gap:1.2rem;}.flegal a{
-font-size:0.68rem;color:rgba(253,250,245,0.22);
+}.fcopy{font-size:0.68rem;color:rgba(253,250,245,0.5);font-weight:300;}.flegal{display:flex;gap:1.2rem;}.flegal a{
+font-size:0.68rem;color:rgba(253,250,245,0.55);
 text-decoration:none;transition:color .2s;
 }.flegal a:hover{color:var(--muted);}.modal-overlay{
 display:none;position:fixed;inset:0;z-index:500;
@@ -299,7 +299,7 @@ display:flex;flex-direction:column;gap:0.85rem;
 margin-bottom:2.5rem;
 }.benefit-list li{
 font-size:0.83rem;line-height:1.6;
-color:rgba(253,250,245,0.55);
+color:rgba(253,250,245,0.85);
 font-weight:300;
 display:flex;gap:0.6rem;align-items:flex-start;
 }.bcheck{
@@ -453,7 +453,7 @@ letter-spacing:0.04em;line-height:1;
 color:var(--dark);margin-bottom:0.6rem;
 }.rs-sub{
 font-size:0.85rem;line-height:1.65;
-color:rgba(17,16,9,0.65);
+color:rgba(17,16,9,0.85);
 font-weight:300;
 }.rs-back-btn{
 margin-top:1rem;
